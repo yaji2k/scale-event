@@ -10,6 +10,9 @@
     <div class="wrapper">
         <div class="block">
             <div class="cont">
+                <div class="scale">
+                    <div class="scale_active"></div>
+                </div>
                 <div class="row">
                     <div class="col app-event">
                         <div class="col_item"></div>
@@ -19,20 +22,29 @@
                     </div>
                     <div class="col app-event">
                         <div class="col_item"></div>
+                        <div class="message">
+                            <div class="message_triangle"></div>
+                            <div class="message_text"></div>
+                        </div>
+                    </div>
+                    <div class="col app-event">
+                        <div class="col_item"></div>
+                    </div>
+                    <div class="col app-event">
+                        <div class="col_item"></div>
                     </div>
                     <div class="col app-event">
                         <div class="col_item"></div>
                     </div>
                 </div>
-                <div class="scale">
-                    <div class="scale_active" :style="{width: width + '%'}"></div>
-                </div>
+
             </div>
         </div>
     </div>
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/scale-event.js"></script>
 </body>
 </html>

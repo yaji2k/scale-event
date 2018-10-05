@@ -1,31 +1,9 @@
-Vue.component('app-phone-order', {
-        data() {
-            return {
-                maxCount: 3,
-                count: 2,
-            }
-        },
-        created() {
-            this.count = document.querySelectorAll(".app-event").length;
-        },
-        computed: {
-            width() {
-                return (this.count-1)/this.maxCount * 100;
-            }
-        },
-        methods: {
+window.onload = function () {
+    var scaleActive = $(".app-event");
+    setWidth(1);
+    function setWidth(count) {
+        var count = count || scaleActive.length - 1
+        $(".scale_active").css({"width": count / (scaleActive.length - 1) * 100 + "%"});
+    }
+}
 
-        },
-        template: ``
-    });
-    new Vue({
-        el: '#app',
-        created() {
-            this.count = document.querySelectorAll(".app-event").length;
-        },
-        computed: {
-            width() {
-                return (this.count-1)/this.maxCount * 100;
-            }
-        },
-    });

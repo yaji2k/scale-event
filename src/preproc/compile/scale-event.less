@@ -12,18 +12,15 @@ body {
 .block {
   width: 100%;
   height: 300px;
-  background-image: linear-gradient(239deg, #4e4e4e, #000000);
+  background-image: linear-gradient(239deg, #4e4e4e, #000);
 }
 
 .cont {
+  padding-top: 35px;
   width: 100%;
-  height: 34px;
-  position: relative;
 }
 
 .row {
-  position: absolute;
-  top: 50%;
   margin-top: -3.5px;
   width: 100%;
   display: flex;
@@ -32,14 +29,16 @@ body {
 
 .col {
   color: black;
-  margin: 0 5px;
-  z-index: 1;
+  position: relative;
+  width: 7px;
+  height: 7px;
+  margin-top: -1.5px;
   cursor: pointer;
   &_item {
     background: white;
     margin: 0 auto;
-    width: 7px;
-    height: 7px;
+    width: inherit;
+    height: inherit;
     border-radius: 50%;
   }
   &:first-child {
@@ -56,19 +55,18 @@ body {
     margin-right: 0;
     margin-top: -2px;
     text-align: right;
-
+    width: 11px;
+    height: 11px;
   }
   &:last-child &_item {
     width: 11px;
     height: 11px;
     margin-right: 0;
+    margin-top: -2px;
   }
 }
 
 .scale {
-  position: absolute;
-  top: 50%;
-  margin-top: -1.5px;
   width: 100%;
   height: 3px;
   background: #fff;
@@ -81,14 +79,20 @@ body {
 
 .message {
   width: 310px;
+  position: absolute;
+  top: 10px;
+  left: -80%;
   &_triangle {
     position: absolute;
-    border: 20px solid transparent;
-    border-right: 20px solid green;
-    border-bottom: 20px solid green;
+    left: 80%;
+    border: 10px solid transparent;
+    border-right: 10px solid green;
+    border-bottom: 10px solid green;
   }
   &_text {
+    margin-top: 20px;
     padding: 8px;
+    width: 100%;
     border-radius: 4px;
     background-color: #fff;
     box-shadow: 6px 12px 22px 0 rgba(0, 0, 0, 0.4);
